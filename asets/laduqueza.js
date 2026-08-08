@@ -66,7 +66,7 @@ function initProductImages() {
 
 function esDiaHabil(fecha) {
   const dia = fecha.getDay();
-  return dia !== 0 && dia !== 6;
+  return dia !== 0;
 }
 
 function obtenerFechaMinimaEntrega() {
@@ -96,7 +96,7 @@ function validarFechaEntrega(valorFecha) {
   const fecha = new Date(partes[0], partes[1] - 1, partes[2]);
 
   if (!esDiaHabil(fecha)) {
-    return 'Solo entregamos de lunes a viernes (días hábiles).';
+    return 'Solo entregamos de lunes a sábado.';
   }
 
   const minima = obtenerFechaMinimaEntrega();
@@ -138,7 +138,7 @@ function initFormPedido() {
 
   if (avisoFecha) {
     avisoFecha.textContent =
-      'Entregas solo de lunes a viernes. Anticipo mínimo de 2 días hábiles. ' +
+      'Entregas de lunes a sábado. Anticipo mínimo de 2 días hábiles. ' +
       'Primera fecha disponible: ' +
       minima.toLocaleDateString('es-AR', { weekday: 'long', day: 'numeric', month: 'long' }) + '.';
   }
@@ -170,6 +170,7 @@ function initFormPedido() {
       title: 'Nuevo pedido: ' + document.getElementById('producto').value,
       name: document.getElementById('nombre').value + ' ' + document.getElementById('apellido').value,
       email: document.getElementById('email').value,
+      telefono: document.getElementById('telefono').value,
       producto: document.getElementById('producto').value,
       fecha: inputFecha.value,
       cantidad: cantidad + ' ' + (Number(cantidad) === 1 ? 'unidad' : 'unidades'),
