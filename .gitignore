@@ -1,0 +1,10 @@
+# Copias originales de fotos (quedan locales)
+Fotos/
+fotos sobre mi/
+
+# Archivos del sistema
+desktop.ini
+Thumbs.db
+
+# Datos locales
+.DS_Store
