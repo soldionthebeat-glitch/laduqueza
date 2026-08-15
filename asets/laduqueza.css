@@ -869,6 +869,37 @@ section h2::after {
   line-height: 1.5;
 }
 
+/* BOX PERSONALIZADO */
+.box-destacado {
+  max-width: 780px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #1a3a2b 0%, #355f4a 100%);
+  border: 2px solid #e6d3b3;
+  border-radius: 20px;
+  padding: 45px 30px;
+  color: #e6d3b3;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(26, 58, 43, 0.25);
+}
+
+.box-destacado p {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.box-consulta {
+  margin-top: 60px;
+}
+
+.box-consulta h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  color: #1a3a2b;
+}
+
 /* SOBRE MÍ */
 .sobre-hero {
   display: grid;

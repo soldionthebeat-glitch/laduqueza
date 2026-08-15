@@ -108,6 +108,28 @@ function validarFechaEntrega(valorFecha) {
   return '';
 }
 
+function initBoxForm() {
+  const form = document.getElementById('form-box');
+  if (!form) return;
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById('box-nombre').value;
+    const contacto = document.getElementById('box-contacto').value;
+    const detalle = document.getElementById('box-detalle').value;
+
+    const mensaje =
+      'Hola La Duqueza, quiero armar una box personalizada.\n' +
+      'Nombre: ' + nombre + '\n' +
+      'Contacto: ' + contacto + '\n' +
+      'Detalle: ' + detalle;
+
+    const url = 'https://wa.me/5491126140342?text=' + encodeURIComponent(mensaje);
+    window.open(url, '_blank', 'noopener');
+  });
+}
+
 function initPersonalizado() {
   const checkbox = document.getElementById('personalizado');
   const campos = document.getElementById('personalizado-campos');
@@ -208,4 +230,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initProductImages();
   initPersonalizado();
   initFormPedido();
+  initBoxForm();
 });
