@@ -1337,6 +1337,49 @@ section h2::after {
   margin: 0 auto;
 }
 
+.promo-columnas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+
+.promo-columna {
+  background: white;
+  border: 2px solid #f2aebe;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.promo-columna h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  color: #1a3a2b;
+  margin: 10px 0;
+}
+
+.promo-precio {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1a3a2b;
+  margin: 6px 0 10px;
+}
+
+.promo-lista {
+  margin: 12px 0 0 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .promo-columnas {
+    grid-template-columns: 1fr;
+  }
+}
+
 .box-consulta {
   margin-top: 60px;
 }
